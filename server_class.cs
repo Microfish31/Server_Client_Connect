@@ -29,22 +29,22 @@ namespace Server_connect
         {
             // Input Data
             // Client ID        type int  <try>
-            // "192.168.1.107"  type String
+            // "Your IP (Ipv4)" type String
             // 3000             type int
 
             get_byte_length = 0;
 
-            //建立IP地址（IP地址和埠號是伺服器端的，用來和伺服器進行通訊）
+            // 建立IP地址（IP地址和埠號是伺服器端的，用來和伺服器進行通訊）
             IPAddress ip = IPAddress.Parse(ip_address);
             EndPoint ep = new IPEndPoint(ip, port);
 
-            //listen()只有在bind()通話後才能工作。
-            //192.168.1.107:port 繫結EP
+            // listen()只有在bind()通話後才能工作。
+            // Your IP (Ipv4):port 繫結EP
             server.Bind(ep);
 
             // 伺服器開始監聽
             // public void Listen (int32 backlog);
-            //設定最大連線數量為10
+            // 設定最大連線數量為10
             server.Listen(10);
 
             // set max buffer
