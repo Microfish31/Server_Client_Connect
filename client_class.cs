@@ -29,7 +29,7 @@ namespace client_connect
         {
             // Input Data
             // Client ID        type int  <try>
-            // "192.168.1.107"  type String
+            //"Your IP (Ipv4)"  type String
             // 3000             type int
 
             get_byte_length = 0;
