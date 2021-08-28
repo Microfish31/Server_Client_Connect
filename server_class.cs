@@ -37,24 +37,24 @@ namespace Server_connect
             // 建立IP地址（IP地址和埠號是伺服器端的，用來和伺服器進行通訊）
             IPAddress ip = IPAddress.Parse(ip_address);
             EndPoint ep = new IPEndPoint(ip, port);
-
-            // listen()只有在bind()通話後才能工作。
-            // Your IP (Ipv4):port 繫結EP
-            server.Bind(ep);
-
-            // 伺服器開始監聽
-            // public void Listen (int32 backlog);
-            // 設定最大連線數量為10
-            server.Listen(10);
-
-            // set max buffer
-            server.ReceiveBufferSize = 65536;
-
-            // set timeout 10 sec
-            // server.ReceiveTimeout = 10000;
-
+            
             try
             {
+                // listen()只有在bind()通話後才能工作。
+                // Your IP (Ipv4):port 繫結EP
+                server.Bind(ep);
+
+                // 伺服器開始監聽
+                // public void Listen (int32 backlog);
+                // 設定最大連線數量為10
+                server.Listen(10);
+
+                // set max buffer
+                server.ReceiveBufferSize = 65536;
+
+                // set timeout 10 sec
+                // server.ReceiveTimeout = 10000;
+
                 //return " Sever Set Ok !!\n";
                 Console.WriteLine("Sever Set Ok !!");
 
